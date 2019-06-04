@@ -59,7 +59,15 @@ year: "1941"
   def test_add_artists
     @curator.add_artist(@artist_1)
     @curator.add_artist(@artist_2)
+    # binding.pry
     assert_equal 2, @curator.artists.length
+  end
+
+  def test_find_artist_by_id
+    @curator.add_artist(@artist_1)
+    @curator.add_artist(@artist_2)
+    #binding.pry
+    assert_instance_of Artist, @curator.find_artist_by_id("1")
   end
 
 end
