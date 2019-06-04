@@ -1,7 +1,8 @@
 class Curator
-  attr_reader
+  attr_reader :artists, :photographs
 
   def initialize
-
+    @artists = []
+    @photographs = []
   end
 end
