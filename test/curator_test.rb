@@ -23,8 +23,7 @@ artist_id: "2",
 year: "1941"
     }
 
-    @artist_1 = {
-  id: "1"
+    @artist_1 = {id: "1",
   name: "Henri Cartier-Bresson",
   born: "1908",
   died: "2004",
