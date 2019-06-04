@@ -114,6 +114,7 @@ class CuratorTest < MiniTest::Test
   end
 
   def test_artists_with_multiple_photos
+    skip
     @curator.add_photograph(@photo_1)
     @curator.add_photograph(@photo_2)
     @curator.add_photograph(@photo_3)
@@ -123,7 +124,7 @@ class CuratorTest < MiniTest::Test
     @curator.add_artist(@artist_2)
     @curator.add_artist(@artist_3)
     diane_arbus = @curator.find_artist_by_id("3")
-    binding.pry
+    #binding.pry
     assert_equal [diane_arbus], @curator.artists_with_multiple_photographs
   end
 
@@ -136,6 +137,7 @@ class CuratorTest < MiniTest::Test
     @curator.add_artist(@artist_1)
     @curator.add_artist(@artist_2)
     @curator.add_artist(@artist_3)
+    binding.pry
     assert_equal [@photo_2, @photo_3, @photo_4], @curator.photographs_taken_by_artist_from("United States")
     assert_equal [], @curator.photographs_taken_by_artist_from("Argentina")
   end

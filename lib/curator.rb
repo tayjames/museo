@@ -41,4 +41,10 @@ class Curator
     # artist_name
   end
 
+  def photographs_taken_by_artist_from(country)
+    @artists.find_all do |artist|
+      country == artist.country
+    end #gives me my list of artists from country but I'm stuck after this.
+  end
+
 end
